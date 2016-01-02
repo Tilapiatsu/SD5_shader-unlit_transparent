@@ -6,4 +6,4 @@ Installation
 
 Just copy the content of unlit_transparent folder to
 
-<Susbtance Install Dir>\resources\view3d\shaders\
+%SUSBTANCE_INSTALL_DIR%\resources\view3d\shaders\
