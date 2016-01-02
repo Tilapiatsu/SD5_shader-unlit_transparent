@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glslfx version="1.0.0" author="tilapiatsu.fr">
+
+    <!-- TECHNIQUES -->
+    <technique name="Unlit">
+        <!-- PROPERTIES -->
+        <property name="blend_enabled"      value="true"/>
+        <property name="blend_func"         value="src_alpha,one_minus_src_alpha"/>
+        <property name="cull_face_enabled"  value="false"/>
+        <!--property name="cull_face_mode"     value="back"/-->
+
+        <!-- SHADERS -->
+        <shader type="vertex"               filename="unlit/vs.glsl"/>
+        <shader type="fragment"             filename="unlit/fs.glsl"/>
+
+    </technique>    
+
+    <!-- INPUT VERTEX FORMAT -->
+    <vertexformat name="iVS_Position"   semantic="position"/>
+    <vertexformat name="iVS_UV"         semantic="texcoord0"/>
+
+    <!-- SAMPLERS -->
+    <sampler name="diffuseMap"          usage="diffuse"/>
+    <sampler name="opacityMap"          usage="opacity"/>
+
+    <!-- MATRICES -->
+    <uniform name="worldViewProjMatrix"         semantic="worldviewprojection"/>
+
+
+    <!-- SCENE PARAMETERS -->
+	
+    <!-- MISC PARAMETERS -->	
+
+    <!-- UNIFORMS -->
+    <uniform name="tiling"                                          guiName="Tiling"        default="1" min="1" guiWidget="slider" guiMax="10"/>
+
+</glslfx>
